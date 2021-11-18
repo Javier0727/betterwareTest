@@ -6,7 +6,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 
 const middleware = [thunk];
 
-const makeStore = () =>
+const makeStore: any = () =>
   createStore(rootReducer, composeWithDevTools(applyMiddleware(...middleware)));
 
 export const wrapper = createWrapper(makeStore);
