@@ -37,7 +37,7 @@ const ProductCard: FC<{ data: productI }> = ({ data }) => {
   };
 
   const handleClick = () => {
-    router.push(`/cart?id=${data.code}`);
+    router.push(`/detail?id=${data.code}`);
   };
 
   return (

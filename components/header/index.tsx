@@ -43,7 +43,12 @@ const Header = () => {
       </Box>
       <Box>
         <IconButton onClick={() => router.push("/cart")}>
-          <Badge badgeContent={shoppingCart.length} color="warning">
+          <Badge
+            badgeContent={shoppingCart
+              .map((product) => product.quantity)
+              .reduce((prev, curr) => prev + curr, 0)}
+            color="warning"
+          >
             <ShoppingCartIcon />
           </Badge>
         </IconButton>
